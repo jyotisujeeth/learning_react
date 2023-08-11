@@ -5,14 +5,14 @@ import Card from "../UI/Card";
 import "./ExpenseItem.css";
 
 const ExpenseItem = (props) => {
-// function clickhandedle
-const [title, setTitle]= useState(props.title);
-
-
+// function click handler
+const [amount, setamount] = useState(props.amount);
+console.log('ExpensesItem evaluated by React');
+const title = props.title;
 
   const clickHandler = () => {
-   setTitle('updated!');
-    console.log(title);
+   setamount(100);
+    console.log(amount);
   };
 
  // document.
@@ -21,12 +21,39 @@ const [title, setTitle]= useState(props.title);
       <ExpenseDate date={props.date} />
       <div className="expense-item__description">
         <h2>{title}</h2>
-        <div className="expense-item__price">${props.amount}</div>
+        <div className="expense-item__price">${props.setamount}</div>
+        <h2>{amount}</h2>
       </div>
-      <button onClick={clickHandler}> Delete</button>
+      <button onClick={clickHandler}>changeAmount</button>
       {/* <button onClick={() => {console.log("clicked ")}}> change title</button> */}
     </Card>
   );
 };
 
 export default ExpenseItem;
+
+
+
+// const ExpenseItem = (props) => {
+//   // function click handler
+//   const [title, setTitle] = useState(props.title);
+//   console.log("ExpensesItem evaluated by React");
+
+//   const clickHandler = () => {
+//     setTitle("changeIt!");
+//     console.log(title);
+//   };
+
+//   // document.
+//   return (
+//     <Card className="expense-item">
+//       <ExpenseDate date={props.date} />
+//       <div className="expense-item__description">
+//         <h2>{title}</h2>
+//         <div className="expense-item__price">${props.amount}</div>
+//       </div>
+//       <button onClick={clickHandler}>changeTitle</button>
+//       {/* <button onClick={() => {console.log("clicked ")}}> change title</button> */}
+//     </Card>
+//   );
+// };
