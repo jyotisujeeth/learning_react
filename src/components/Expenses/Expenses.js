@@ -6,6 +6,7 @@ import "./Expenses.css";
 
 const Expenses = (props) => {
   return (
+    
     <Card className="expenses">
       <ExpenseItem
         title={props.items[0].title}
