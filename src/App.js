@@ -1,7 +1,7 @@
-import React from "react";
+  import React from "react";
 
+import NewExpense from "./components/NewExpenses/NewExpenses";
 import Expenses from "./components/Expenses/Expenses";
-
 const App = () => {
   const expenses = [
     {
@@ -25,6 +25,15 @@ const App = () => {
     },
   ];
 
+  const App=() => {
+    const [expenses, setExpenses] = useState(DUMMT_EXPENSES);
+  const addExpenseHandler = (expense) => {
+    setExpenses((prevExpense) => {
+      return [expense, ...prevExpense];
+    
+    })
+  };
+
   // return React.createElement(
   //   'div',
   //   {},
@@ -34,7 +43,7 @@ const App = () => {
 
   return (
     <div>
-      <h2>Let's get started!</h2>
+      <NewExpense onAddExpense={addExpenseHandler} />
       <Expenses items={expenses} />
     </div>
   );
