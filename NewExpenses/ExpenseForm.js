@@ -2,8 +2,6 @@ import React, { useState } from "react";
 
 import "./ExpenseForm.css";
 
-
-
 const ExpenseForm = (props) => {
   const [enteredTitle, setEnteredTitle] = useState("");
   const [enteredAmount, setEnteredAmount] = useState("");
@@ -42,7 +40,7 @@ const ExpenseForm = (props) => {
   };
 
   const submitHandler = (event) => {
-    event.preventDefault();
+    event.preventDefault();//defulat handeler 
 
     const expenseData = {
       title: enteredTitle,
@@ -89,6 +87,7 @@ const ExpenseForm = (props) => {
         </div>
       </div>
       <div className="new-expense__actions">
+        <button type="butt" onClick={props.onCancel}> Cancel</button>
         <button type="submit">Add Expense</button>
       </div>
     </form>
