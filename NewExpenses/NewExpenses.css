@@ -8,6 +8,16 @@
     text-align: center;
     box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
 }
+/* .new-expense {
+    background-color: blue;
+    padding: 1rem;
+    margin: 1rem auto;
+    width: 55rem;
+    max-width: 100%;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+} */
 
 .new-expense button {
     font: inherit;
